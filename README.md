@@ -4,19 +4,19 @@
 
 > Zero-dependency TypeScript binary struct packer/unpacker. Python-compatible format strings: `pack("!IH4s", ...)` / `unpack(">3I", buf)`. Little/big/network endian. Port of Python `struct` / Ruby `Array#pack`.
 
-[![npm](https://img.shields.io/npm/v/structkit)](https://www.npmjs.com/package/structkit)
+[![npm](https://img.shields.io/npm/v/@billdaddy/structkit)](https://www.npmjs.com/package/@billdaddy/structkit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Install
 
 ```bash
-npm install structkit
+npm install @billdaddy/structkit
 ```
 
 ## Quick start
 
 ```typescript
-import { pack, unpack, calcSize } from "structkit";
+import { pack, unpack, calcSize } from "@billdaddy/structkit";
 
 // Pack a network protocol header (big-endian)
 const buf = pack("!IH", 0xdeadbeef, 42);
@@ -70,7 +70,7 @@ For `s`, the count is the byte length: `4s` = exactly 4 bytes (zero-padded / tru
 ## Examples
 
 ```typescript
-import { pack, unpack, packInto, iterUnpack, Struct } from "structkit";
+import { pack, unpack, packInto, iterUnpack, Struct } from "@billdaddy/structkit";
 
 // Repeat count: 3 uint32s
 const buf = pack("<3I", 100, 200, 300);
@@ -126,7 +126,7 @@ const { values } = header.unpack(buf);
 ## Network protocol example
 
 ```typescript
-import { Struct } from "structkit";
+import { Struct } from "@billdaddy/structkit";
 
 // DNS header (RFC 1035)
 const DnsHeader = new Struct("!HHHHHH");

@@ -1,5 +1,5 @@
 {
-  "name": "structkit",
+  "name": "@billdaddy/structkit",
   "version": "0.1.0",
   "description": "Zero-dependency TypeScript binary struct packer/unpacker. Python struct.pack/unpack format strings: b/B/h/H/i/I/q/Q/f/d/s/x/?. Little/big/network endian. Port of Python struct / Ruby Array#pack.",
   "type": "module",
